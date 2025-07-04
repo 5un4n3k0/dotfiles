@@ -1,3 +1,2 @@
-local opt = vim.opt
-
-opt.number = true
+-- basic options settings --
+require('options')
