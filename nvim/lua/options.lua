@@ -4,7 +4,7 @@
   / _ \| '_ \| __| |/ _ \| '_ \/ __|
  | (_) | |_) | |_| | (_) | | | \__ \
   \___/| .__/ \__|_|\___/|_| |_|___/
-      |_|                          
+       |_|                          
 
 --]]
 
@@ -12,29 +12,47 @@
 -- ----------------
 -- nvim's basic options settings.
 
--- for conciseness
+-- for conciseness --
 local opt = vim.opt
 
 
--- line number
-opt.number = true
-
--- indent
+-- indent --
 opt.shiftwidth = 4
 opt.expandtab = true
 opt.smartindent = true
 opt.autoindent = true
 
--- search
+
+-- search --
 opt.smartcase = true
 opt.ignorecase = true
 opt.hlsearch = true
 opt.incsearch = true
 
--- visual
+
+-- visual --
+opt.number = true
 opt.cursorline = true
 
 
+-- character --
+opt.ambiwidth = 'single'
+
+
+-- input --
 opt.allowrevins = false
 
-opt.ambiwidth = 'single'
+
+-- directory --
+opt.autochdir = false
+
+
+-- reload --
+opt.autoread = false
+
+
+-- language specific settings --
+-- arabic
+opt.arabic = false
+opt.arabicshape = true
+
