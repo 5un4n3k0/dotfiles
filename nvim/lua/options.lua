@@ -16,11 +16,16 @@
 local opt = vim.opt
 
 
--- indent --
+-- indent and line break --
 opt.shiftwidth = 4
 opt.expandtab = true
 opt.smartindent = true
 opt.autoindent = true
+opt.breakindent = true
+opt.breakindentopt = ''
+
+opt.breakat = ' ^I!@*-+;:,./?'
+opt.showbreak = "↪ "
 
 
 -- search --
@@ -42,7 +47,8 @@ opt.ambiwidth = 'single'
 
 -- input --
 opt.allowrevins = false
-opt.backspace = { "indent", "eol", "start" }
+opt.backspace = { 'indent', 'eol', 'start' }
+opt.binary = false
 
 
 -- directory --
@@ -55,6 +61,14 @@ opt.autowrite = false
 opt.autowriteall = false
 
 
+-- bell --
+opt.belloff = 'all'
+
+
+-- when saving --
+opt.bomb = false
+
+
 -- backup --
 -- [Note]
 --   Basically, backup is stored by git system.
@@ -62,7 +76,11 @@ opt.backup = false
 opt.backupcopy = 'auto'
 opt.backupdir = '.,$XDG_STATE_HOME/nvim/backup//'
 opt.backupext = '~'
-opt.backupskip = { "/tmp/*", "/private/tmp/*", "*.log" }
+opt.backupskip = { '/tmp/*', '/private/tmp/*', '*.log' }
+
+
+-- buffer --
+opt.bufhidden = 'hide'
 
 
 -- language specific settings --
