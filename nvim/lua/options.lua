@@ -19,13 +19,18 @@ local opt = vim.opt
 -- indent and line break --
 opt.shiftwidth = 4
 opt.expandtab = true
-opt.smartindent = true
-opt.autoindent = true
+opt.smartindent = true -- when use lsp, false
+opt.autoindent = true -- when use lsp, false
 opt.breakindent = true
 opt.breakindentopt = ''
 
+-- c lang
+opt.cindent = false -- instead lsp
+opt.cinkeys = '0{,0},0),0],:,0#,!^F,o,O,e'
+opt.cinoptions = ''
+
 opt.breakat = ' ^I!@*-+;:,./?'
-opt.showbreak = "↪ "
+opt.showbreak = '↪ '
 
 
 -- search --
@@ -43,6 +48,7 @@ opt.background = 'dark'
 
 -- character --
 opt.ambiwidth = 'single'
+opt.charconvert = ''
 
 
 -- input --
@@ -83,6 +89,18 @@ opt.backupskip = { '/tmp/*', '/private/tmp/*', '*.log' }
 opt.bufhidden = 'hide'
 opt.buflisted = true
 opt.buftype = ''
+
+
+-- replacement --
+opt.casemap = { 'internal', 'keepascii' }
+
+
+-- command --
+-- complement
+opt.cedit = "<C-e>"
+
+-- cd
+opt.cdpath = { '.', '' }
 
 
 -- language specific settings --
