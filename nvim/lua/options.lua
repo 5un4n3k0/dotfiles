@@ -81,6 +81,8 @@ opt.backupskip = { '/tmp/*', '/private/tmp/*', '*.log' }
 
 -- buffer --
 opt.bufhidden = 'hide'
+opt.buflisted = true
+opt.buftype = ''
 
 
 -- language specific settings --
