@@ -33,6 +33,7 @@ opt.incsearch = true
 -- visual --
 opt.number = true
 opt.cursorline = true
+opt.background = 'dark'
 
 
 -- character --
@@ -41,14 +42,27 @@ opt.ambiwidth = 'single'
 
 -- input --
 opt.allowrevins = false
+opt.backspace = { "indent", "eol", "start" }
 
 
 -- directory --
 opt.autochdir = false
 
 
--- reload --
-opt.autoread = false
+-- auto load --
+opt.autoread = true
+opt.autowrite = false
+opt.autowriteall = false
+
+
+-- backup --
+-- [Note]
+--   Basically, backup is stored by git system.
+opt.backup = false
+opt.backupcopy = 'auto'
+opt.backupdir = '.,$XDG_STATE_HOME/nvim/backup//'
+opt.backupext = '~'
+opt.backupskip = { "/tmp/*", "/private/tmp/*", "*.log" }
 
 
 -- language specific settings --
