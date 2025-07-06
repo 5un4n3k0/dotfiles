@@ -24,13 +24,14 @@ opt.autoindent = true -- when use lsp, false
 opt.breakindent = true
 opt.breakindentopt = ''
 
+opt.breakat = ' ^I!@*-+;:,./?'
+opt.showbreak = '↪ '
+
 -- c lang
 opt.cindent = false -- instead lsp
 opt.cinkeys = '0{,0},0),0],:,0#,!^F,o,O,e'
 opt.cinoptions = ''
-
-opt.breakat = ' ^I!@*-+;:,./?'
-opt.showbreak = '↪ '
+opt.cinwords = 'if,else,while,do,for,switch'
 
 
 -- search --
@@ -43,6 +44,7 @@ opt.incsearch = true
 -- visual --
 opt.number = true
 opt.cursorline = true
+opt.colorcolumn = ''
 opt.background = 'dark'
 
 
@@ -55,6 +57,17 @@ opt.charconvert = ''
 opt.allowrevins = false
 opt.backspace = { 'indent', 'eol', 'start' }
 opt.binary = false
+
+
+-- comment --
+opt.comments = 's1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-,fb:•'
+opt.commentstring = ''
+
+
+-- complete --
+opt.complete = '.,w,b,u,t'
+opt.completefunc = '' -- instead lsp
+opt.completeitemalign = 'abbr,kind,menu'
 
 
 -- directory --
@@ -96,8 +109,12 @@ opt.casemap = { 'internal', 'keepascii' }
 
 
 -- command --
+-- cmd window
+opt.cmdheight = 1
+opt.cmdwinheight = 7
+
 -- complement
-opt.cedit = "<C-e>"
+opt.cedit = '<C-r>'
 
 -- cd
 opt.cdpath = { '.', '' }
@@ -107,4 +124,8 @@ opt.cdpath = { '.', '' }
 -- arabic
 opt.arabic = false
 opt.arabicshape = true
+
+
+-- others --
+opt.clipboard = ''
 
