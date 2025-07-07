@@ -17,7 +17,7 @@
 
 
 -- default colorscheme
-local colorscheme = "kanagawa"
+local colorscheme = "tokyonight"
 
 
 -- options each colorschemes
@@ -37,13 +37,15 @@ if colorscheme == "catppuccin" then
 elseif colorscheme == "tokyonight" then
   require("tokyonight").setup({
     style = "storm", -- night, day, moon, storm
-    transparent = true,
+    transparent = false,
   })
 elseif colorscheme == "kanagawa" then
   require("kanagawa").setup({
-    transparent = true,
+    transparent = false,
     theme = "wave", -- wave, dragon, lotus
   })
+--elseif colorscheme == "nord" then
+--  vim.cmd.colorscheme("nord")
 end
 
 
