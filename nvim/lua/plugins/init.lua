@@ -25,6 +25,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
+
+
 -- load plugins file
 require("lazy").setup({
   require("plugins.cmp"),
