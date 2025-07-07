@@ -6,4 +6,3 @@ My terminal related settings files are here!
 
 There is Neovim settings in `nvim/`.
 
-
