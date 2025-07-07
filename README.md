@@ -1,2 +1,9 @@
 # dotfiles
-terminal related config files
+
+My terminal related settings files are here!
+
+## Neovim
+
+There is Neovim settings in `nvim/`.
+
+
