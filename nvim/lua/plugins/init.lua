@@ -27,6 +27,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- load plugins file
 require("lazy").setup({
+  require("plugins.cmp"),
   require("plugins.colorscheme"),
   require("plugins.lsp"),
   require("plugins.ui"),
