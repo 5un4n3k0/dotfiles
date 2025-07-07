@@ -47,6 +47,7 @@ opt.number = true
 opt.cursorline = true
 opt.colorcolumn = ''
 opt.background = 'dark'
+opt.termguicolors = true
 
 
 -- character --

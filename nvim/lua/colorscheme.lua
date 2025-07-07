@@ -37,15 +37,30 @@ if colorscheme == "catppuccin" then
 elseif colorscheme == "tokyonight" then
   require("tokyonight").setup({
     style = "storm", -- night, day, moon, storm
-    transparent = false,
+    transparent = true,
   })
 elseif colorscheme == "kanagawa" then
   require("kanagawa").setup({
-    transparent = false,
+    transparent = true,
     theme = "wave", -- wave, dragon, lotus
   })
 elseif colorscheme == "nord" then
   vim.cmd.colorscheme("nord")
+  vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "nord",
+  callback = function()
+    vim.cmd [[
+      highlight Normal guibg=NONE ctermbg=NONE
+      highlight NormalNC guibg=NONE ctermbg=NONE
+      highlight SignColumn guibg=NONE ctermbg=NONE
+      highlight VertSplit guibg=NONE ctermbg=NONE
+      highlight StatusLine guibg=NONE ctermbg=NONE
+      highlight LineNr guibg=NONE ctermbg=NONE
+      highlight EndOfBuffer guibg=NONE ctermbg=NONE
+      highlight Comment guifg=#88C0D0 ctermfg=109 gui=italic
+    ]]
+  end,
+  })
 end
 
 
