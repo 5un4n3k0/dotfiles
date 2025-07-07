@@ -10,3 +10,4 @@
 -- Author: sunaneko
 -- ----------------
 -- Automatic command settings when saving or loading files.
+

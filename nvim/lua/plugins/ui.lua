@@ -1,4 +1,19 @@
+--[[
+ _   _                 ___       _             __                
+| | | |___  ___ _ __  |_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___ 
+| | | / __|/ _ \ '__|  | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \
+| |_| \__ \  __/ |     | || | | | ||  __/ |  |  _| (_| | (_|  __/
+ \___/|___/\___|_|    |___|_| |_|\__\___|_|  |_|  \__,_|\___\___|
+                                                                 
+]]--
+
+-- Author: sunaneko
+-- ----------------
+-- User interface settings. (e.x.) airline, nerdtree
+
+
 return {
+  -- nerd tree --
   {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -18,14 +33,14 @@ return {
         on_attach = function(bufnr)
         local api = require("nvim-tree.api")
 
-        vim.keymap.set("n", "<CR>", api.node.open.edit, {
-          desc = "Open file or folder",
-          buffer = bufnr,
-          noremap = true,
-          silent = true
-        })
-
       -- open files or directories
+      vim.keymap.set("n", "<CR>", api.node.open.edit, {
+        desc = "Open file or folder",
+        buffer = bufnr,
+        noremap = true,
+        silent = true
+      })
+
       vim.keymap.set("n", "<C-e>", function()
         vim.cmd("NvimTreeClose")
       end, { buffer = bufnr, noremap = true, silent = true })
@@ -42,6 +57,7 @@ return {
     })
   end,
   },
+  -- air line --
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -64,6 +80,7 @@ return {
       })
   end,
   },
+  -- buffer line --
   {
   "akinsho/bufferline.nvim",
   version = "*",
@@ -101,7 +118,7 @@ return {
       vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", true)
       vim.cmd("BufferLineCyclePrev")
     end, { desc = "Prev buffer (insert mode)", noremap = true, silent = true })
-    end,
+  end,
   }
 }
 

@@ -11,3 +11,7 @@
 -- ----------------
 -- Key mapping settings.
 
+
+local g = vim.g
+
+g.mapleader = ' '

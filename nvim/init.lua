@@ -7,6 +7,14 @@
                                      
 ]]--
 
+-- Author: sunaneko
+-- ----------------
+-- Root init file that loads other settings files.
+
+
+-- keymaps --
+require('keymaps')
+
 
 -- plugins install and settings --
 require('plugins')
@@ -14,10 +22,6 @@ require('plugins')
 
 -- basic options settings --
 require('options')
-
-
--- keymaps --
-require('keymaps')
 
 
 -- automatic commands --

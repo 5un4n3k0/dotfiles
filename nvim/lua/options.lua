@@ -12,6 +12,7 @@
 -- ----------------
 -- nvim's basic options settings.
 
+
 -- for conciseness --
 local opt = vim.opt
 
