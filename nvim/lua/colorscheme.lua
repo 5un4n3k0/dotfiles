@@ -17,7 +17,7 @@
 
 
 -- default colorscheme
-local colorscheme = "tokyonight"
+local colorscheme = "nord"
 
 
 -- options each colorschemes
@@ -44,8 +44,8 @@ elseif colorscheme == "kanagawa" then
     transparent = false,
     theme = "wave", -- wave, dragon, lotus
   })
---elseif colorscheme == "nord" then
---  vim.cmd.colorscheme("nord")
+elseif colorscheme == "nord" then
+  vim.cmd.colorscheme("nord")
 end
 
 
