@@ -114,7 +114,7 @@ opt.cmdheight = 1
 opt.cmdwinheight = 7
 
 -- complement
-opt.cedit = '<C-r>'
+opt.cedit = '<C-e>'
 
 -- cd
 opt.cdpath = { '.', '' }
