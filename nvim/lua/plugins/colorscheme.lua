@@ -17,6 +17,7 @@ return {
     "shaunsingh/nord.nvim",
     name = "nord",
     priority = 1000,
+    lazy = false,
   },
   {
     "catppuccin/nvim",

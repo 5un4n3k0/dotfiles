@@ -28,7 +28,7 @@ return {
         vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", true)
         toggle_tree()
       end, { noremap = true, silent = true })
-      
+
       require("nvim-tree").setup({
         on_attach = function(bufnr)
         local api = require("nvim-tree.api")
@@ -65,7 +65,7 @@ return {
     config = function()
       require("lualine").setup({
         options = {
-          theme = "kanagawa",  -- colorscheme
+          theme = "nord",  -- colorscheme
           component_separators = "|",
           section_separators = "",
         },

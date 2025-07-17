@@ -18,12 +18,13 @@ return {
   cmd = "Telescope",
   keys = {
     { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "find file" },
-    { "<leader>fg", "<cmd>Telescope live_grep<cr>",  desc = "find string" },
+    { "<leader>fl", "<cmd>Telescope live_grep<cr>",  desc = "find string" },
     { "<leader>fb", "<cmd>Telescope buffers<cr>",    desc = "find buffer" },
     { "<leader>fh", "<cmd>Telescope help_tags<cr>",  desc = "find help" },
   },
   config = function()
     require("telescope").setup({
+      theme = "nord",
       defaults = {
         layout_strategy = "horizontal",
         layout_config = {
@@ -36,7 +37,7 @@ return {
             ["<C-h>"] = "which_key",
           },
         },
-      },
+     },
       pickers = {
         find_files = {
           hidden = true,

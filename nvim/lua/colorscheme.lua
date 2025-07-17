@@ -46,6 +46,7 @@ elseif colorscheme == "kanagawa" then
   })
 elseif colorscheme == "nord" then
   vim.cmd.colorscheme("nord")
+  vim.cmd("colorscheme nord")
   vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "nord",
   callback = function()
