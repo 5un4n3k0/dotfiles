@@ -31,3 +31,7 @@ require('autocmds')
 -- colorscheme --
 require('colorscheme')
 
+
+-- file types --
+require('filetype')
+

@@ -35,7 +35,7 @@
 	# The maximum length of the left status bar.
 	export TMUX_POWERLINE_STATUS_LEFT_LENGTH="60"
 	# The maximum length of the right status bar.
-	export TMUX_POWERLINE_STATUS_RIGHT_LENGTH="90"
+	export TMUX_POWERLINE_STATUS_RIGHT_LENGTH="120"
 
 	# The separator to use between windows on the status bar.
 	export TMUX_POWERLINE_WINDOW_STATUS_SEPARATOR=""
@@ -262,11 +262,11 @@
 	# File to be read in case the song is being read from a file
 	export TMUX_POWERLINE_SEG_NOW_PLAYING_FILE_NAME=""
 	# Maximum output length.
-	export TMUX_POWERLINE_SEG_NOW_PLAYING_MAX_LEN="40"
+	export TMUX_POWERLINE_SEG_NOW_PLAYING_MAX_LEN="30"
 	# How to handle too long strings. Can be {trim, roll}.
 	export TMUX_POWERLINE_SEG_NOW_PLAYING_TRIM_METHOD="trim"
 	# Characters per second to roll if rolling trim method is used.
-	export TMUX_POWERLINE_SEG_NOW_PLAYING_ROLL_SPEED="2"
+	export TMUX_POWERLINE_SEG_NOW_PLAYING_ROLL_SPEED="1"
 	# Mode of roll text {"space", "repeat"}. space: fill up with empty space; repeat: repeat text from beginning
 	# export TMUX_POWERLINE_SEG_NOW_PLAYING_ROLL_MODE="repeat"
 	# Separator for "repeat" roll mode
@@ -301,7 +301,7 @@
 	# How often in seconds to update the data from last.fm.
 	export TMUX_POWERLINE_SEG_NOW_PLAYING_LASTFM_UPDATE_PERIOD="30"
 	# Fancy char to display before now playing track
-	export TMUX_POWERLINE_SEG_NOW_PLAYING_NOTE_CHAR="♫"
+	export TMUX_POWERLINE_SEG_NOW_PLAYING_NOTE_CHAR="♪"
 	
 	# Plexamp
 	# Set up steps for Plexamp
