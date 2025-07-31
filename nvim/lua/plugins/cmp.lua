@@ -44,5 +44,8 @@ return {
         }),
       })
     end,
+  },
+  {
+      'ixru/nvim-markdown'
   }
 }

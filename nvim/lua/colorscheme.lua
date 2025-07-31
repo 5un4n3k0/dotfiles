@@ -17,7 +17,7 @@
 
 
 -- default colorscheme
-local colorscheme = "nord"
+local colorscheme = "kanagawa"
 
 
 -- options each colorschemes
