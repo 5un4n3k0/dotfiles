@@ -8,7 +8,8 @@ There is settings files about Z shell in `zsh/`.
 
 ### Directory Tree
 
-```plain text
+```plaintext
+zsh
 ├── sheldon
 │   └── plugins.toml
 └── zsh
@@ -18,6 +19,11 @@ There is settings files about Z shell in `zsh/`.
 ## Alacritty
 
 There is settings files about Alacritty in `alacritty/`.
+
+### Directory Tree
+
+```plaintext
+```
 
 ## Neovim
 
