@@ -12,7 +12,7 @@ There is settings files about Z shell in `zsh/`.
 
 ### Directory Tree
 
-```toml
+```plaintext
 zsh
 ├── .zshrc # root loader
 ├── sheldon
@@ -35,7 +35,7 @@ The directory is usually linked to `~/.config/` with a symbolic link.
 
 ### Directory Tree
 
-```toml
+```plaintext
 alacritty
 ├── alacritty.toml # root loader
 ├── font.toml
@@ -53,7 +53,7 @@ The directory is usually linked to `~/.config/` with a symbolic link.
 
 ### Directory Tree
 
-```toml
+```plaintext
 nvim
 ├── init.lua # root loader
 └── lua
@@ -84,7 +84,7 @@ There is Tmux settings files in `tmux/`.
 
 And, all directories under `plugins/` is also placed in `~/.config/`.
 
-```toml
+```plaintext
 tmux
 ├── .tmux.conf # root loader
 ├── plugins
