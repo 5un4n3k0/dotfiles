@@ -12,4 +12,11 @@
 -- Coding plugins download and settings like auto pair, comment.
 
 
-return {}
+return {
+    {
+        'skanehira/preview-markdown.vim',
+        name = "preview-markdown",
+        priority = 1000,
+        lazy = false,
+    },
+}
