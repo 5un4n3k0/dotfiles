@@ -39,7 +39,11 @@ case "$OS" in
 		ln -s ~/dotfiles/alacritty/ ~/.config/
 
 		# --- tmux settings ---
-		echo "[INFO] Make symlink ~/dotfiles/alacritty/ -> ~/.config/"
+		echo "[INFO] Install tmux"
+		sudo apt install tmux
+		echo "[INFO] Make symlink ~/dotfiles/tmux/.tmux.conf/ -> ~/.tmux.conf"
+		ln -s ~/dotfiles/tmux/.tmux.conf/ ~/.tmux.conf
+		echo "[INFO] Make symlink ~/dotfiles/tmux/tmux/ -> ~/.config/"
 		ln -s ~/dotfiles/tmux/tmux/ ~/.config/
 		echo "[INFO] git clone tpm for tmux -> ~/.tmux/plugins/tpm/"
 		git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -66,7 +70,11 @@ case "$OS" in
 		ln -s ~/dotfiles/alacritty/ ~/.config/
 
 		# --- tmux settings ---
-		echo "[INFO] Make symlink ~/dotfiles/alacritty/ -> ~/.config/"
+		echo "[INFO] Install tmux"
+		brew install tmux
+		echo "[INFO] Make symlink ~/dotfiles/tmux/.tmux.conf/ -> ~/.tmux.conf"
+		ln -s ~/dotfiles/tmux/.tmux.conf/ ~/.tmux.conf
+		echo "[INFO] Make symlink ~/dotfiles/tmux/tmux/ -> ~/.config/"
 		ln -s ~/dotfiles/tmux/tmux/ ~/.config/
 		echo "[INFO] git clone tpm for tmux -> ~/.tmux/plugins/tpm/"
 		git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -93,11 +101,15 @@ case "$OS" in
 		ln -s ~/dotfiles/alacritty/ ~/.config/
 
 		# --- tmux settings ---
-		echo "[INFO] Make symlink ~/dotfiles/alacritty/ -> ~/.config/"
+		echo "[INFO] Install tmux"
+		sudo pkg install tmux
+		echo "[INFO] Make symlink ~/dotfiles/tmux/.tmux.conf/ -> ~/.tmux.conf"
+		ln -s ~/dotfiles/tmux/.tmux.conf/ ~/.tmux.conf
+		echo "[INFO] Make symlink ~/dotfiles/tmux/tmux/ -> ~/.config/"
 		ln -s ~/dotfiles/tmux/tmux/ ~/.config/
 		echo "[INFO] git clone tpm for tmux -> ~/.tmux/plugins/tpm/"
 		git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-		echo "[INFO] Make symlink ~/dotfiles/tmux/plugins/ -> ~/.tmux/plugins//"
+		echo "[INFO] Make symlink ~/dotfiles/tmux/plugins/ -> ~/.tmux/plugins/"
 		ln -s ~/dotfiles/tmux/plugins/* ~/.tmux/plugins/
 		
 		# --- NeoVim settings ---
