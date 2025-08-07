@@ -2,6 +2,24 @@
 
 My settings files about terminal are here!
 
+## Premise
+
+> ! These dotfiles is prepared for me.
+
+You have to be eble to use basic package manger.
+
+e.g.) `brew`, `apt`, `pkg`
+
+And, `git` is also requirement.
+
+These dotfiles are planned to be compatible with macOS, Linux, and BSD in the future. (Currently only compatible with macOS.)
+
+This repository is designed to be placed in the HOME directory.
+
+## Installation
+
+Execute `setup.sh`.
+
 ## zsh
 
 There is settings files about Z shell in `zsh/`.
