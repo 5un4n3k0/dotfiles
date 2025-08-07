@@ -82,7 +82,7 @@ There is Tmux settings files in `tmux/`.
 
 `tmux/tmux/` is placed in `~/.config/` with symbolc link.
 
-And, all directories under `plugins/` is also placed in `~/.config/`.
+And, all directories under `plugins/` is also placed in `~/.tmux/plugins//`.
 
 ```plaintext
 tmux
