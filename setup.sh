@@ -17,10 +17,29 @@ RED="\033[31m"
 GREEN="\033[32m"
 RESET="\033[0m"
 
+
+# -------------------------------------------
+# Internal Functions
+# -------------------------------------------
+
+# --- put info message ---
+puinfo ()
+{
+	printf "[ ${GREEN}INFO${RESET} ] $1"
+}
+
+# --- put error message ---
+puerror ()
+{
+	printf "[ ${RED}ERROR${RESET} ] $1"
+{
+
+
 # -------------------------------------------
 # Main Processes
 # -------------------------------------------
-echo "[INFO] Setting up dotfiles..."
+# echo "[INFO] Setting up dotfiles..."
+puinfo "Setting up dotfiles..."
 
 # --- Detecting OS ---
 OS="$(uname)"
