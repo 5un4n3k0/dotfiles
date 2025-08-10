@@ -61,7 +61,7 @@ case "$OS" in
 		echo "[INFO] Install tmux"
 		sudo apt install tmux
 		echo "[INFO] Make symlink ~/dotfiles/tmux/.tmux.conf/ -> ~/.tmux.conf"
-		ln -s ~/dotfiles/tmux/.tmux.conf/ ~/.tmux.conf
+		ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 		echo "[INFO] Make symlink ~/dotfiles/tmux/tmux/ -> ~/.config/"
 		ln -s ~/dotfiles/tmux/tmux/ ~/.config/
 		echo "[INFO] git clone tpm for tmux -> ~/.tmux/plugins/tpm/"
