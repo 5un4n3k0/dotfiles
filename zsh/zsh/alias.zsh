@@ -20,11 +20,24 @@ alias lait="ls -ait"
 
 if command -v eza >/dev/null 2>&1; then
     alias ls="eza"
-    alias lt="eza -snew"
-    alias llt="eza -l -snew"
-    alias llat="eza -la -snew"
+    alias lt="ls -snew"
+    alias llt="ls -l -snew"
+    alias llat="ls -la -snew"
     alias lait="ls -ai -snew"
 fi
+
+
+# --- grep ---
+alias grep="grep --color=auto"
+
+
+# --- diff ---
+alias diff="diff --color=auto"
+
+
+# --- ip ---
+alias ip="ip --color=auto"
+
 
 # --- git ---
 alias gia="git add"
@@ -38,4 +51,3 @@ alias gicl="git clone"
 # --- NeoVim ---
 alias v="nvim"
 
-# 
