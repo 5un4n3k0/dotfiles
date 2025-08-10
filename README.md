@@ -2,7 +2,7 @@
 
 My settings files about terminal are here!
 
-## Premise
+## Abstract
 
 > ! These dotfiles is prepared for me.
 
@@ -15,6 +15,8 @@ And, `git` is also requirement.
 These dotfiles are planned to be compatible with macOS, Linux, and BSD in the future. (Currently only compatible with macOS.)
 
 This repository is designed to be placed in the HOME directory.
+
+If you have improvement, Please teach me by issue!
 
 ## Installation
 
@@ -34,9 +36,14 @@ There is settings files about Z shell in `zsh/`.
 zsh
 ├── .zshrc # root loader
 ├── sheldon
-│   └── plugins.toml
+│   └── plugins.toml
 └── zsh
-    └── alias.zsh
+    ├── alias.zsh
+    ├── basic.zsh
+    ├── exports.zsh
+    ├── path.zsh
+    ├── plugin.zsh
+    └── utils.zsh
 ```
 
 ### Plugin Manager
