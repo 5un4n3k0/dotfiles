@@ -38,107 +38,125 @@ puerror ()
 # -------------------------------------------
 # Main Processes
 # -------------------------------------------
-# echo "[INFO] Setting up dotfiles..."
+# puinfo "Setting up dotfiles..."
 puinfo "Setting up dotfiles..."
 
 # --- Detecting OS ---
 OS="$(uname)"
 case "$OS" in
 	Linux)
-		echo "[INFO] Linux detected"
+		puinfo "Linux detected"
 
 		# --- make config directory ---
-		echo "[INFO] Make ~/.config/ directory"
+		puinfo "Make ~/.config/ directory"
 		mkdir ~/.config
 
 		# --- zsh settings ---
+		puinfo "Make symlink ~/dotfiles/zsh/.zshrc -> ~/.zshrc"
+		ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
+		puinfo "Make symlink ~/dotfiles/zsh/zsh/ -> ~/.config/"
+		ln -s ~/dotfiles/zsh/zsh/ ~/.config/
+		puinfo "Make symlink ~/dotfiles/zsh/sheldon/ -> ~/.config/"
+		ln -s ~/dotfiles/zsh/sheldon/ ~/.config/
 		
 		# --- alacritty settigs ---
-		echo "[INFO] Make symlink ~/dotfiles/alacritty/ -> ~/.config/"
+		puinfo "Make symlink ~/dotfiles/alacritty/ -> ~/.config/"
 		ln -s ~/dotfiles/alacritty/ ~/.config/
 
 		# --- tmux settings ---
-		echo "[INFO] Install tmux"
+		puinfo "Install tmux"
 		sudo apt install tmux
-		echo "[INFO] Make symlink ~/dotfiles/tmux/.tmux.conf/ -> ~/.tmux.conf"
+		puinfo "Make symlink ~/dotfiles/tmux/.tmux.conf/ -> ~/.tmux.conf"
 		ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
-		echo "[INFO] Make symlink ~/dotfiles/tmux/tmux/ -> ~/.config/"
+		puinfo "Make symlink ~/dotfiles/tmux/tmux/ -> ~/.config/"
 		ln -s ~/dotfiles/tmux/tmux/ ~/.config/
-		echo "[INFO] git clone tpm for tmux -> ~/.tmux/plugins/tpm/"
+		puinfo "git clone tpm for tmux -> ~/.tmux/plugins/tpm/"
 		git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-		echo "[INFO] Make symlink ~/dotfiles/tmux/plugins/ -> ~/.tmux/plugins//"
+		puinfo "Make symlink ~/dotfiles/tmux/plugins/ -> ~/.tmux/plugins//"
 		ln -s ~/dotfiles/tmux/plugins/* ~/.tmux/plugins/
 		
 		# --- NeoVim settings ---
 		sudo apt install neovim
-		echo "[INFO] Make symlink ~/dotfiles/nvim/ -> ~/.config/"
+		puinfo "Make symlink ~/dotfiles/nvim/ -> ~/.config/"
 		ln -s ~/dotfiles/nvim/ ~/.config/
 
 		;;
 	Darwin)
-		echo "[INFO] macOS detected"
+		puinfo "macOS detected"
 		
 		# --- make config directory ---
-		echo "[INFO] Make ~/.config/ directory"
+		puinfo "Make ~/.config/ directory"
 		mkdir ~/.config
 
 		# --- zsh settings ---
+		puinfo "Make symlink ~/dotfiles/zsh/.zshrc -> ~/.zshrc"
+		ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
+		puinfo "Make symlink ~/dotfiles/zsh/zsh/ -> ~/.config/"
+		ln -s ~/dotfiles/zsh/zsh/ ~/.config/
+		puinfo "Make symlink ~/dotfiles/zsh/sheldon/ -> ~/.config/"
+		ln -s ~/dotfiles/zsh/sheldon/ ~/.config/
 		
 		# --- alacritty settigs ---
-		echo "[INFO] Make symlink ~/dotfiles/alacritty/ -> ~/.config/"
+		puinfo "Make symlink ~/dotfiles/alacritty/ -> ~/.config/"
 		ln -s ~/dotfiles/alacritty/ ~/.config/
 
 		# --- tmux settings ---
-		echo "[INFO] Install tmux"
+		puinfo "Install tmux"
 		brew install tmux
-		echo "[INFO] Make symlink ~/dotfiles/tmux/.tmux.conf/ -> ~/.tmux.conf"
+		puinfo "Make symlink ~/dotfiles/tmux/.tmux.conf/ -> ~/.tmux.conf"
 		ln -s ~/dotfiles/tmux/.tmux.conf/ ~/.tmux.conf
-		echo "[INFO] Make symlink ~/dotfiles/tmux/tmux/ -> ~/.config/"
+		puinfo "Make symlink ~/dotfiles/tmux/tmux/ -> ~/.config/"
 		ln -s ~/dotfiles/tmux/tmux/ ~/.config/
-		echo "[INFO] git clone tpm for tmux -> ~/.tmux/plugins/tpm/"
+		puinfo "git clone tpm for tmux -> ~/.tmux/plugins/tpm/"
 		git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-		echo "[INFO] Make symlink ~/dotfiles/tmux/plugins/ -> ~/.tmux/plugins//"
+		puinfo "Make symlink ~/dotfiles/tmux/plugins/ -> ~/.tmux/plugins//"
 		ln -s ~/dotfiles/tmux/plugins/* ~/.tmux/plugins/
 		
 		# --- NeoVim settings ---
 		brew install neovim
-		echo "[INFO] Make symlink ~/dotfiles/nvim/ -> ~/.config/"
+		puinfo "Make symlink ~/dotfiles/nvim/ -> ~/.config/"
 		ln -s ~/dotfiles/nvim/ ~/.config/
 
 		;;
 	FreeBSD|OpenBSD)
-		echo "[INFO] BSD detected"
+		puinfo "BSD detected"
 
 		# --- make config directory ---
-		echo "[INFO] Make ~/.config/ directory"
+		puinfo "Make ~/.config/ directory"
 		mkdir ~/.config
 
 		# --- zsh settings ---
+		puinfo "Make symlink ~/dotfiles/zsh/.zshrc -> ~/.zshrc"
+		ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
+		puinfo "Make symlink ~/dotfiles/zsh/zsh/ -> ~/.config/"
+		ln -s ~/dotfiles/zsh/zsh/ ~/.config/
+		puinfo "Make symlink ~/dotfiles/zsh/sheldon/ -> ~/.config/"
+		ln -s ~/dotfiles/zsh/sheldon/ ~/.config/
 		
 		# --- alacritty settigs ---
-		echo "[INFO] Make symlink ~/dotfiles/alacritty/ -> ~/.config/"
+		puinfo "Make symlink ~/dotfiles/alacritty/ -> ~/.config/"
 		ln -s ~/dotfiles/alacritty/ ~/.config/
 
 		# --- tmux settings ---
-		echo "[INFO] Install tmux"
+		puinfo "Install tmux"
 		sudo pkg install tmux
-		echo "[INFO] Make symlink ~/dotfiles/tmux/.tmux.conf/ -> ~/.tmux.conf"
+		puinfo "Make symlink ~/dotfiles/tmux/.tmux.conf/ -> ~/.tmux.conf"
 		ln -s ~/dotfiles/tmux/.tmux.conf/ ~/.tmux.conf
-		echo "[INFO] Make symlink ~/dotfiles/tmux/tmux/ -> ~/.config/"
+		puinfo "Make symlink ~/dotfiles/tmux/tmux/ -> ~/.config/"
 		ln -s ~/dotfiles/tmux/tmux/ ~/.config/
-		echo "[INFO] git clone tpm for tmux -> ~/.tmux/plugins/tpm/"
+		puinfo "git clone tpm for tmux -> ~/.tmux/plugins/tpm/"
 		git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-		echo "[INFO] Make symlink ~/dotfiles/tmux/plugins/ -> ~/.tmux/plugins/"
+		puinfo "Make symlink ~/dotfiles/tmux/plugins/ -> ~/.tmux/plugins/"
 		ln -s ~/dotfiles/tmux/plugins/* ~/.tmux/plugins/
 		
 		# --- NeoVim settings ---
 		sudo pkg install neovim
-		echo "[INFO] Make symlink ~/dotfiles/nvim/ -> ~/.config/"
+		puinfo "Make symlink ~/dotfiles/nvim/ -> ~/.config/"
 		ln -s ~/dotfiles/nvim/ ~/.config/
 
 		;;
 	*)
-		printf "${RED}[ERROR]${RESET} Unsupported OS: $OS"
+		puerror "Unsupported OS: $OS"
 		;;
 esac
 
