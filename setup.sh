@@ -25,13 +25,13 @@ RESET="\033[0m"
 # --- put info message ---
 puinfo ()
 {
-	printf "[ ${GREEN}INFO${RESET} ] $1"
+	printf "[ ${GREEN}INFO${RESET} ] $1\n"
 }
 
 # --- put error message ---
 puerror ()
 {
-	printf "[ ${RED}ERROR${RESET} ] $1"
+	printf "[ ${RED}ERROR${RESET} ] $1\n"
 }
 
 
